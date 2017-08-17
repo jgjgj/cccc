@@ -93,13 +93,10 @@ var isAnswerGiven = false;
 			url = $form.attr("action");
 			
 			$.post(url, data, function(responseText) {
-				var parseData;
-				parseData.answerStatus = "right" ;
-			 answerStatus = parseData.answerStatus;
-			 parseData.givenAnswer ="option4";
-			 parseData.rightAnswer ="option4";
 				
 				
+				
+				var parseData = $.parseJSON(responseText);
 				console.log(parseData);
 				$.Topic("CQ10_ON_RESPONSE").publish();
 				
@@ -164,15 +161,13 @@ var isAnswerGiven = false;
 		
 		if(answerStatus === "right"){
 			onRightAnswer(parseData);
-			console.log('worked_r');
+			console.log('workr');
 		}else if (answerStatus === "NA") {
 			onNOAnswer(parseData);
-			
-			console.log('worked_na');
+			console.log('workna');
 		}else{
 			onWrongAnswer(parseData);
-			
-			console.log('worked_na');
+			console.log('workno');
 		}
 	}
 	function afterAjaxCalling() {
