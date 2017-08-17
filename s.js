@@ -107,7 +107,6 @@ var isAnswerGiven = false;
 			    answerStatus = parseData.answerStatus;
 			parseData.answerStatus = "right" ;
 			 
-			parseData.answerStatus = 'right' ;
 				console.log(parseData);
 			    if(billingStatus === "200"){
 			    	
