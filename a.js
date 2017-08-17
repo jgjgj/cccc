@@ -161,13 +161,10 @@ var isAnswerGiven = false;
 		
 		if(answerStatus === "right"){
 			onRightAnswer(parseData);
-			console.log('workr');
 		}else if (answerStatus === "NA") {
 			onNOAnswer(parseData);
-			console.log('workna');
 		}else{
 			onWrongAnswer(parseData);
-			console.log('workno');
 		}
 	}
 	function afterAjaxCalling() {
