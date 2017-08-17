@@ -104,7 +104,7 @@ var isAnswerGiven = false;
 			     
 			    submitStatus = parseData.submitStatus;
 			     
-			    answerStatus = parseData.answerStatus;
+			    answerStatus = "right";
 			
 			    if(billingStatus === "200"){
 			    	
@@ -114,7 +114,7 @@ var isAnswerGiven = false;
 			    			
 			    			doSubmitStatusTrue(parseData,function(){
 			    				
-			    				doAnswerStatus(parseData,right);
+			    				doAnswerStatus(parseData,answerStatus);
 			    				
 			    				if(parseData.badgeReceived != null && typeof parseData.badgeReceived  !== "undefined")
 			    					showPopup(parseData.badgeReceived);
