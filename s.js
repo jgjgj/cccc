@@ -65,7 +65,7 @@ var isAnswerGiven = false;
 	};
 
 
-				console.log(parseData);
+			console.log(parseData);
 })(jQuery);
 
 function doRefreshWidgetForTimePerQuestion(widgetKey){
