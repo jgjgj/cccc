@@ -146,7 +146,7 @@ var isAnswerGiven = false;
 			    	$.Topic("CQ10_ON_BILLING_FALSE").publish(parseData.billingMessage);
 			    }
 			    callback();
-			});
+		});
 		}catch(e){
 			
 		}
