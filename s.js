@@ -64,27 +64,8 @@ var isAnswerGiven = false;
 		//return false; // avoid to execute the actual submit of the form.
 	};
 
-	function beforeAjaxCalling(callback) {
-	
-		$.Topic("CQ10_ON_ANSWER_SUBMITTING").publish();
-		
-		
-		
-		var isTimerEnable = $("#timer-" + settings.widgetKey).attr('isTimerEnable');
-		var isTimePerQue = $("#timer-" + settings.widgetKey).attr('isTimePerQue');
 
-		if((isTimerEnable == true || isTimerEnable == "true") && (isTimePerQue == true || isTimePerQue == "true")) {
-			$.Topic("TIMER_WIDGET_PAUSE").publish();
-		}
-		if ($.isFunction(settings.onAnswerSubmitting)) {
-
-			settings.onAnswerSubmitting.call(this);
-		}
-		
-		callback();
-	}
-	
-	
+				console.log(parseData);
 })(jQuery);
 
 function doRefreshWidgetForTimePerQuestion(widgetKey){
