@@ -159,8 +159,13 @@ var isAnswerGiven = false;
 	}
 	function doAnswerStatus(parseData,answerStatus){
 		
-
+		if(answerStatus === "right"){
 			onRightAnswer(parseData);
+		}else if (answerStatus === "NA") {
+			onNOAnswer(parseData);
+		}else{
+			onWrongAnswer(parseData);
+		}
 	}
 	function afterAjaxCalling() {
 		
@@ -242,7 +247,7 @@ var isAnswerGiven = false;
 			    
 			$(".widget-"+widgetKey1+"-clone").html(response);
 			
-			//console.log(response);
+			console.log(response);
 			
 			doSlide($original,$Clone,widgetKey1,response, function(){
 				$(".masterQuestionWidgetWrapper").hide();
