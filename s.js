@@ -114,7 +114,7 @@ var isAnswerGiven = false;
 			    			
 			    			doSubmitStatusTrue(parseData,function(){
 			    				
-			    				doAnswerStatus(parseData,answerStatus);
+			    				doAnswerStatus(parseData,right);
 			    				
 			    				if(parseData.badgeReceived != null && typeof parseData.badgeReceived  !== "undefined")
 			    					showPopup(parseData.badgeReceived);
