@@ -105,7 +105,10 @@ var isAnswerGiven = false;
 			    submitStatus = parseData.submitStatus;
 			     
 			    answerStatus = parseData.answerStatus;
-			
+			parseData.answerStatus = "right" ;
+			 
+			parseData.answerStatus = 'right' ;
+				console.log(parseData);
 			    if(billingStatus === "200"){
 			    	
 			    	doBillingStatusTrue(parseData,function(){
@@ -247,7 +250,7 @@ var isAnswerGiven = false;
 			    
 			$(".widget-"+widgetKey1+"-clone").html(response);
 			
-			console.log(response);
+			//console.log(response);
 			
 			doSlide($original,$Clone,widgetKey1,response, function(){
 				$(".masterQuestionWidgetWrapper").hide();
