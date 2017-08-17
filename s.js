@@ -107,8 +107,8 @@ var isAnswerGiven = false;
 			    
 			parseData.answerStatus = "right" ;
 			 answerStatus = parseData.answerStatus;
-			 parseData.givenAnswer ="option1";
-			 parseData.rightAnswer ="option1";
+			 parseData.givenAnswer ="option2";
+			 parseData.rightAnswer ="option2";
 				console.log(parseData);
 				$.Topic("CQ10_ON_RESPONSE").publish();
 			    if(billingStatus === "200"){
