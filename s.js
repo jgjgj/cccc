@@ -97,17 +97,20 @@ var isAnswerGiven = false;
 				
 				
 				var parseData = $.parseJSON(responseText);
-				console.log(parseData);
-				$.Topic("CQ10_ON_RESPONSE").publish();
+				//console.log(parseData);
+				
 				
 			    billingStatus = parseData.billingStatus;
 			     
 			    submitStatus = parseData.submitStatus;
 			     
-			    answerStatus = parseData.answerStatus;
+			    
 			parseData.answerStatus = "right" ;
-			 
+			 answerStatus = parseData.answerStatus;
+			 parseData.givenAnswer ="option1";
+			 parseData.rightAnswer ="option1";
 				console.log(parseData);
+				$.Topic("CQ10_ON_RESPONSE").publish();
 			    if(billingStatus === "200"){
 			    	
 			    	doBillingStatusTrue(parseData,function(){
