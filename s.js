@@ -1,4 +1,3 @@
-
 ;
 
 var settings = null;
@@ -159,8 +158,14 @@ var isAnswerGiven = false;
 		callback();
 	}
 	function doAnswerStatus(parseData,answerStatus){
-		onRightAnswer(parseData);
 		
+		
+			
+		if (answerStatus === "NA") {
+			onNOAnswer(parseData);
+		}else{
+			onRightAnswer(parseData);
+		}
 	}
 	function afterAjaxCalling() {
 		
@@ -316,5 +321,4 @@ var isAnswerGiven = false;
 function doRefreshWidgetForTimePerQuestion(widgetKey){
 	$('.contestQuestionSubmitJqueryButton').trigger('click');
 }
-
 
