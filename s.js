@@ -104,7 +104,7 @@ var isAnswerGiven = false;
 			     
 			    submitStatus = parseData.submitStatus;
 			     
-			    answerStatus = "right";
+			    answerStatus = parseData.answerStatus;
 			
 			    if(billingStatus === "200"){
 			    	
@@ -159,13 +159,8 @@ var isAnswerGiven = false;
 	}
 	function doAnswerStatus(parseData,answerStatus){
 		
-		
-			
-		if (answerStatus === "NA") {
-			onNOAnswer(parseData);
-		}else{
+
 			onRightAnswer(parseData);
-		}
 	}
 	function afterAjaxCalling() {
 		
